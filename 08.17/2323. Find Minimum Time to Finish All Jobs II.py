@@ -7,19 +7,40 @@ Return the minimum number of days needed to complete all the jobs after assignme
 """
 
 from math import ceil
+import heapq
+
+# class Solution:
+#
+#     def minimumTime(self, jobs: list[int], workers: list[int]) -> int:
+#
+#         jobs.sort()
+#         workers.sort()
+#
+#         ans = float("-inf")
+#
+#         for job, worker in zip(jobs, workers):
+#
+#             ans = max(ans, ceil(job / worker))
+#
+#         return ans
 
 
 class Solution:
 
     def minimumTime(self, jobs: list[int], workers: list[int]) -> int:
+        n = len(jobs)
 
-        jobs.sort()
-        workers.sort()
+        heapq.heapify(jobs)
+        heapq.heapify(workers)
 
-        ans = float("-inf")
+        days = float("-inf")
+        while jobs:
+            job = heapq.heappop(jobs)
+            worker = heapq.heappop(workers)
+            # print(job, worker)
 
-        for job, worker in zip(jobs, workers):
+            time = ceil(job / worker)
 
-            ans = max(ans, ceil(job / worker))
+            days = max(days, time)
 
-        return ans
+        return days
