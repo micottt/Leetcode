@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple eCommerce Layout</title>
+  <style>
+    /* Basic CSS styling */
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      background-color: #0055BB;
+      color: white;
+      padding: 15px;
+    }
+    
+    header img {
+      margin-right: 20px;
+    }
+    
+    .search-container {
+      margin-left: 20px;
+      margin-right: auto;
+      padding-left: 20px
+      max-width: 1000px
+    }
+    .search-container input[type="search"] {
+      width: 200%;  /* Makes the input take up all available width */
+      padding: 10px;  /* Adds some padding for visual comfort */
+      font-size: 16px;  /* Sets the font size */
+    }
+    
+    .nav {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    
+    nav {
+      background-color: #0055BB;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      float: left;
+      width: calc(33.333% - 20px);
+      box-sizing: border-box;
+    }
+
+    footer {
+      background-color: #0055BB;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      clear: both;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="image-container">
+      <img src="./walmart-logo.png" alt="Logo"
+           style="width: 100px; height:50px; object-fit: cover;"
+      >
+    </div>
+    <div class="nav">
+      <p>Departments</p>
+    </div>
+    
+    <div class="nav">
+      <p>Services</p>
+    </div>
+    
+    <div class="search-container">
+      <input type="search" placeholder="Search everything at Walmart online and in store">
+    </div>
+    
+    <div class="nav">
+      <p>My Items</p>
+    </div>
+    
+    <div class="nav">
+      <p>Account</p>
+    </div>
+    
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <!-- Featured Products -->
+    <h2>Featured Products</h2>
+
+    <div class="product-card">
+      <h3>Product 1</h3>
+      <p>Price: $10</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Product 2</h3>
+      <p>Price: $20</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Product 3</h3>
+      <p>Price: $30</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright 2023, Simple eCommerce</p>
+  </footer>
+
+</body>
+</html>
